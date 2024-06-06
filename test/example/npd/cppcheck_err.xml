@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.9"/>
+    <errors>
+        <error id="nullPointer" severity="warning" msg="Possible null pointer dereference: buf" verbose="Possible null pointer dereference: buf" cwe="476" file0="npd.c">
+            <location file="npd.c" line="24" column="3" info="Null pointer dereference"/>
+            <location file="npd.c" line="21" column="21" info="Assignment &apos;buf=priv&apos;, assigned value is 0"/>
+            <location file="npd.c" line="46" column="18" info="Calling function &apos;acl_read_cb&apos;, 2nd argument &apos;NULL&apos; value is 0"/>
+            <symbol>buf</symbol>
+        </error>
+    </errors>
+</results>

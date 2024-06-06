@@ -1,0 +1,14 @@
+{
+    "bug_id": 1,
+    "bug_type": "Uninitialized Value",
+    "line": 6,
+    "column": 5,
+    "procedure": "main",
+    "file": "main.c",
+    "qualifier": {
+        "Infer": "The value read from x was never initialized."
+    },
+    "Trace": [
+        {"filename": "main.c", "line_number": 6, "column_number": 5, "description": ""}
+    ]
+}

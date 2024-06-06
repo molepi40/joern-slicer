@@ -1,0 +1,13 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion": {
+                "main.c": [7]
+            },
+            "slice": {
+                "main.c": []
+            }
+        }
+    ]
+}

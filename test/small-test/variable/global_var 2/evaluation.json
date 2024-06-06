@@ -1,0 +1,31 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion": {
+                "global_var.c": [12]
+            },
+            "slice": {
+                "global_var.c": []
+            }
+        },
+        {
+            "id": 1,
+            "criterion": {
+                "global_var.c": [16]
+            },
+            "slice": {
+                "global_var.c": []
+            }            
+        },
+        {
+            "id": 2,
+            "criterion": {
+                "global_var.c": [21]
+            },
+            "slice": {
+                "global_var.c": []
+            }            
+        }
+    ]
+}

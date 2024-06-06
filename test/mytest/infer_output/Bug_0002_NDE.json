@@ -1,0 +1,16 @@
+{
+    "bug_id": 2,
+    "bug_type": "Null Dereference",
+    "line": 6,
+    "column": 5,
+    "procedure": "add_complex",
+    "file": "utils.c",
+    "qualifier": {
+        "Infer": "pointer `c` last assigned on line 5 could be null and is dereferenced at line 6, column 5."
+    },
+    "Trace": [
+        {"filename": "utils.c", "line_number": 4, "column_number": 1, "description": "start of procedure add_complex()"},
+        {"filename": "utils.c", "line_number": 5, "column_number": 5, "description": ""},
+        {"filename": "utils.c", "line_number": 6, "column_number": 5, "description": ""}
+    ]
+}

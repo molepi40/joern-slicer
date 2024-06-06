@@ -1,0 +1,40 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion":{
+                "main.c": [7]
+            },
+            "slice": {
+                "main.c": []
+            }
+        },
+        {
+            "id": 1,
+            "criterion":{
+                "main.c": [13]
+            },
+            "slice": {
+                "main.c": []
+            }
+        },
+        {
+            "id": 2,
+            "criterion":{
+                "main.c": [19]
+            },
+            "slice": {
+                "main.c": []
+            }
+        },
+        {
+            "id": 3,
+            "criterion":{
+                "main.c": [26]
+            },
+            "slice": {
+                "main.c": []
+            }
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "bug_id": 1,
+    "bug_type": "Uninitialized argument value",
+    "line": 6,
+    "column": 5,
+    "procedure": "main",
+    "file": "main.c",
+    "qualifier": {
+        "CSA": "2nd function call argument is an uninitialized value"
+    },
+    "Trace": [
+        {"filename": "main.c", "line_number": 5, "column_number": 5, "description": "'x' declared without an initial value"},
+        {"filename": "main.c", "line_number": 6, "column_number": 5, "description": "2nd function call argument is an uninitialized value"}
+    ]
+}

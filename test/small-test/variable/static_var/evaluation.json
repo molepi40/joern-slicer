@@ -1,0 +1,13 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion": {
+                "static_var.c": [9]
+            },
+            "slice": {
+                "static_var.c": []
+            }
+        }
+    ]
+}

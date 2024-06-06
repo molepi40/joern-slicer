@@ -1,0 +1,15 @@
+{
+    "bug_id": 2,
+    "bug_type": "Memory leak",
+    "line": 8,
+    "column": 1,
+    "procedure": "add_complex",
+    "file": "utils.c",
+    "qualifier": {
+        "CSA": "Potential leak of memory pointed to by 'c'"
+    },
+    "Trace": [
+        {"filename": "utils.c", "line_number": 5, "column_number": 28, "description": "Memory is allocated"},
+        {"filename": "utils.c", "line_number": 8, "column_number": 1, "description": "Potential leak of memory pointed to by 'c'"}
+    ]
+}

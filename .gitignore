@@ -1,0 +1,7 @@
+.vscode
+__pyc__
+*.pyc
+pdg
+cpg
+*.dot
+record.md

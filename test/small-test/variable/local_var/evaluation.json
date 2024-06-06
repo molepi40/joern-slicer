@@ -1,0 +1,13 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion": {
+                "local_var.c": [4]
+            },
+            "slice": {
+                "local_var.c": []
+            }
+        }
+    ]
+}

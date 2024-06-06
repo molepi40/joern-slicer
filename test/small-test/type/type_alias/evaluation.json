@@ -1,0 +1,49 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion": {
+                "type_alias.c": [9]
+            },
+            "slice": {
+                "type_alias.c": []
+            }
+        },
+        {
+            "id": 1,
+            "criterion": {
+                "type_alias.c": [10]
+            },
+            "slice": {
+                "type_alias.c": []
+            }
+        },
+        {
+            "id": 2,
+            "criterion": {
+                "type_alias.c": [16]
+            },
+            "slice": {
+                "type_alias.c": []
+            }
+        },
+        {
+            "id": 3,
+            "criterion": {
+                "type_alias.c": [19]
+            },
+            "slice": {
+                "type_alias.c": []
+            }
+        },
+        {
+            "id": 4,
+            "criterion": {
+                "type_alias.c": [25]
+            },
+            "slice": {
+                "type_alias.c": []
+            }
+        }
+    ]
+}

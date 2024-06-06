@@ -1,0 +1,22 @@
+{
+    "bench": [
+        {
+            "id": 0,
+            "criterion": {
+                "pointer.cpp": [5]
+            },
+            "slice": {
+                "pointer.cpp": [5, 6, 7, 9]
+            }
+        },
+        {
+            "id": 1,
+            "criterion": {
+                "pointer.cpp": [9]
+            },
+            "slice": {
+                "pointer.cpp": [5, 8, 9]
+            }
+        }
+    ]
+}
