@@ -29,6 +29,7 @@ class CPGEdgeType(Enum):
     POST_DOMINATE = 11
 
     CDG = 12
+    DDG = 25
     REACHING_DEF = 13
     PARAM_DP = 20
     CALL_DP = 21
@@ -172,8 +173,4 @@ class CPGPropertyType(Enum):
     VALUE = 41
     VERSION = 42
     CONTAINED_REF = 43
-
-class PDGEdgeType(Enum):
-    DDG = 0
-    CDG = 1
     

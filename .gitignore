@@ -1,7 +1,9 @@
 .vscode
-__pyc__
+__pycache__
 *.pyc
+cpg.bin
 pdg
 cpg
 *.dot
+*.log
 record.md

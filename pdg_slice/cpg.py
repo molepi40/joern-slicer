@@ -2,6 +2,7 @@ import pydot
 import os
 import re
 from .type import *
+import html
 from collections.abc import Generator
 
 
@@ -217,6 +218,29 @@ class CPG:
             
     def _parse_file_dot(file_name: str) -> str:
         return re.match(r"(?P<method>.+)\.dot", file_name).groupdict()["method"]
+
+    def add_pdg_edge_from_dot(self, pdg_dir):
+        for pdg_file in os.listdir(pdg_dir):
+            # load pdg
+            pdg_file = os.path.join(pdg_dir, pdg_file)
+            graph = pydot.graph_from_dot_file(pdg_file)[0]
+            
+            # add edges of pdg
+            for dot_edge in graph.get_edge_list():
+                edge_label = CPGEdgeType[CPG._parse_pdg_edge_label(dot_edge.get_attributes()["label"])]
+                if edge_label == CPGEdgeType.DDG:
+                    src_id = int(dot_edge.get_source()[1:-1])
+                    dst_id = int(dot_edge.get_destination()[1:-1])
+                    edge = CPGEdge((src_id, dst_id, edge_label))
+                    self.nodes[src_id].add_out_edge(edge)
+                    self.nodes[dst_id].add_in_edge(edge)
+
+    def _parse_pdg_edge_label(label) -> str:
+        label = html.unescape(label)
+        i = 1
+        while label[i] != ":":
+            i += 1
+        return label[1:i]
 
     def get_nodes_iterator(self) -> Generator[CPGNode]:
         for node in self.nodes.values():

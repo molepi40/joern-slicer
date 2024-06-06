@@ -1,7 +1,6 @@
 import queue
 from .type import *
 from .cpg import CPGEdge, CPGNode, CPG
-from .pdg import PDGEdge, PDGNode, PDG
 from .dependency import add_dependency
 from .output import map_node_to_src, output_source
 from .find_target import find_target_nodes_by_lines, find_target_nodes_by_locations
@@ -12,9 +11,9 @@ You can use the slicer by calling pipeline method in this file.
 """
 
 
-dependency_edge_type = [CPGEdgeType.CDG,
+dependency_edge_type = [CPGEdgeType.CDG, CPGEdgeType.DDG,
                         CPGEdgeType.CALL_DP, CPGEdgeType.PARAM_DP,
-                        CPGEdgeType.REF_DP, CPGEdgeType.REACHING_DEF,
+                        CPGEdgeType.REF_DP,
                         CPGEdgeType.TYPE_DP, CPGEdgeType.MEM_DP]
 
 
@@ -104,12 +103,13 @@ def _find_dependency(cpg_obj: CPG, criterion: dict[str, list| set]) -> set[CPGNo
     return dependencies
 
 
-def preprocess(cpg_dir: str, add_dp) -> CPG:
+def preprocess(cpg_dir: str, pdg_dir: str, add_dp) -> CPG:
     """ load graph and add dependency
     """
     
     cpg_obj = CPG()
     cpg_obj.load_from_dot(cpg_dir)
+    cpg_obj.add_pdg_edge_from_dot(pdg_dir)
 
     if add_dp:
         add_dependency(cpg_obj)
@@ -129,10 +129,10 @@ def run_slice(cpg_obj: CPG, src_dir: str, criterion: dict[str, list| set], outpu
     output_source(src_dir, dependency_src, output_file)  
 
 
-def pipeline(cpg_dir:str, src_dir: str, criterion: dict[str, list| set], output_file: str, add_dp):
+def pipeline(cpg_dir:str, pdg_dir:str, src_dir: str, criterion: dict[str, list| set], output_file: str, add_dp):
     """pipeline of this dependency slicer
     """
 
-    cpg_obj = preprocess(cpg_dir, add_dp)
+    cpg_obj = preprocess(cpg_dir, pdg_dir, add_dp)
 
     run_slice(cpg_obj, src_dir, criterion, output_file, add_dp)
