@@ -1,4 +1,10 @@
-direcly run `test.py`
+# joern-slicer
+
+This is a simple slicer based on CPG and PDG exported by [joern](https://docs.joern.io/). Before you use this tool you have to ensure that joern has been installed and fill the right path of joern in `./run_joern/run_joern.py`.
+
+The slicer support 3 kinds of criterion format `evaluation.json`, `cppcheck_err.xml` and `BUG_*.json`. You can check them in some of the test cases in `./test`. Of course you can just create your own format and use interface provided by `pdg_slice` to do the slice as you want. Glance at the slicer in `./slicer` to know the usage of the interface, bug do not forget to analyaze the source code with joern first.
+
+If you just want to follow my structure of test cases, direcly run `test.py` to launch the slicer.
 ```
 example for single test
 
